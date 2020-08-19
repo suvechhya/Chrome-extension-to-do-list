@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        What's your work?
+    </title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="lib/css/materialize.min.css" media="screen,projection" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <main class="wrapper">
+        <section class="hero">
+            <h1>What's your work for today?</h1>
+        </section>
+        <section class="add">
+            <a class="btn-floating btn-large waves-effect waves-light pulse blue-grey darken-3" id="addBtn"><i
+                    class="material-icons">add</i></a>
+        </section>
+        <section class="loader tooltipped" data-position="bottom" data-tooltip="I am a tooltip" id="loader">
+            <div class="progress">
+                <div class="determinate" id="determinate"></div>
+            </div>
+        </section>
+        <section class="tasks">
+            <ul id="task-list">
+                <li class="card">
+                    <h2 class="text-center">No Tasks Available</h2>
+                </li>
+            </ul>
+        </section>
+
+        <!-- The Modal -->
+        <div id="add-modal" class="custom-modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <header>
+                    <h4>Add Task <span class="close">&times;</span></h4>
+                </header>
+                <form id='addform'>
+                    <div class="input-field">
+                        <input id="input_text" type="text" data-length="10">
+                        <label for="input_text">Title</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="timepicker" class="timepicker">
+                        <label for="timepicker">Task Time</label>
+                        <label class="validation" id="timepicker-validation"></label>
+                    </div>
+                    <div class="input-field">
+                        <textarea id="task-desc" class="materialize-textarea" data-length="120"></textarea>
+                        <label for="task-desc">Task Description</label>
+                    </div>
+                    <label for="switch">Enable Notifications ?</label>
+                    <div class="switch">
+                        <label>
+                            Off
+                            <input type="checkbox" id="noti">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    <div class="button-set">
+                        <a class="waves-effect waves-light btn-large" id='submit-task'>Submit</a>
+                        <a class="waves-effect waves-light btn-large" id='cancel-add'>Cancel</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script type="text/javascript" src="lib/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

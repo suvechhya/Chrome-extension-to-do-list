@@ -1,0 +1,14 @@
+{ 
+    "manifest_version": 2,
+    "name": "What's your work?",
+    "description": "Creates a To Do List for the day that provides reminders.", 
+    "version": "1", 
+    "author": "Suvechhya Banerjee",
+    "browser_action": { "default_popup": "popup.html", "default_title": "What's your work?" },
+    "chrome_url_overrides" : { "newtab": "todolist.html" },
+    "permissions": ["notifications"],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    }
+}
